@@ -1,5 +1,5 @@
 #!/bin/bash
 git add --all
-git commit -m "Passos-GitHub"
+git commit -m "Projeto-Spring Gerenciador de Salas"
 git push
 read
