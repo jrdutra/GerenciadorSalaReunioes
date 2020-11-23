@@ -25,7 +25,7 @@ import javax.validation.Valid;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:40200")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1")
 public class RoomController {
 
@@ -62,6 +62,7 @@ public class RoomController {
         return ResponseEntity.ok(updateRoom);
     }
 
+    @DeleteMapping("/rooms/{id}")
     public Map<String, Boolean> deleteRoom(@PathVariable(value="id") Long roomId)
     throws ResourceNotFoundException{
         Room room = roomRepository.findById(roomId)
